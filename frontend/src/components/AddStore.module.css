@@ -1,0 +1,64 @@
+.modalContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalTitle{
+font-size: 1rem;
+font-weight: 600;
+margin-bottom: 1rem;
+}
+
+.modalButton{
+    width: 100%;
+}
+
+.modalContent{
+margin-bottom: 1rem;
+}
+
+.addrButton{
+    background-color: rgba(235, 235, 235, 0.849);
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: rgb(98, 187, 90);
+}
+
+.mapContainer{
+    margin: 1rem 0;
+}
+
+.formButtonGroup{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formButton{
+    /* width: calc(50% - 0.4rem); */
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+
+.formButton2{
+    width: 50%
+}
+
+@media (min-width: 481px){
+    .formButton{
+        width: calc(50% - 0.4rem);
+        
+        margin-top: 1rem;
+        
+    }
+}

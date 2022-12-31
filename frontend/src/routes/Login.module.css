@@ -1,0 +1,173 @@
+.card{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.cardSingle{
+    background-color: rgb(240, 240, 240);
+    width: 45%;
+    margin: 0.5rem;
+    height: 5rem;
+    color: red;
+   
+}
+
+.cardSingle a{
+    text-decoration: none;
+    color: black;
+}
+
+.allStoreContainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.userTypeContainer{
+    display: flex;
+    flex-direction: column;
+   
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.userTypeSingle{
+/* background-color: rgb(248, 248, 248); */
+border-radius: 1rem;
+border: 1px solid rgb(209, 209, 209);
+padding: 1rem;
+display: flex;
+gap:  1rem;
+cursor: pointer;
+}
+
+.userTypeSingle:hover{
+    background-color: rgb(243, 243, 243);
+}
+
+.userTypeSingleActive{
+    background-color: rgb(221, 255, 229);
+    border-radius: 1rem;
+    border: 1px solid rgb(71, 141, 86);
+    
+    padding: 1rem;
+    display: flex;
+    gap:  1rem;
+   cursor: pointer;
+    }
+
+    .userTypeSingleActive:hover{
+        background-color: rgb(198, 255, 211);
+    }
+
+.userTypeSingleIcon{
+   font-size: 1.8rem;
+   color: rgb(117, 117, 117);
+}
+
+.userTypeTitle{
+    margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contentTitle{
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+
+}
+
+.contentDescription{
+    font-size: 0.8rem;
+    color: rgb(160, 160, 160);
+}
+
+.middleText{
+    display: flex;
+padding: 1rem 0;
+color: rgb(102, 102, 102);
+}
+
+.middleText:before, .middleText:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid rgb(209, 209, 209);
+    margin: auto;
+  }
+  .middleText:before {
+    margin-right: 10px
+  }
+  .middleText:after {
+    margin-left: 10px
+  }
+
+  .googleLogin{
+    width: 100%;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(36, 36, 36);
+  }
+
+  .kakaoLogin{
+    width: 100%;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(49, 49, 49);
+    background-color: rgb(255, 223, 42);
+  }
+
+  @media (min-width: 481px){
+    .userTypeContainer{
+        display: flex;
+        flex-direction: row;
+       
+        
+    }
+
+    .formInputGroup{
+max-width: 450px;
+margin: 0 auto;
+    }
+
+    .kakaoLogin{
+        max-width: 450px;
+
+    }
+
+    .googleLogin{
+        max-width: 450px;
+
+    }
+
+    .socialLoginGroup{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+}

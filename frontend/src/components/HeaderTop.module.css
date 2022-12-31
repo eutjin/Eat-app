@@ -1,0 +1,167 @@
+
+
+.headerRight{
+    display: flex;
+align-items: center;
+}
+
+.avatarContainer{
+    background-color: rgb(248, 248, 248);
+    width: 2rem;
+    height: 2rem;
+border-radius: 1rem;
+margin-right: 1rem;
+border: solid 2px rgb(121, 207, 157);
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+color:rgb(121, 207, 157) ;
+font-size: 1.2rem;
+}
+
+.dropdown{
+    
+    width: 15rem;
+    padding: 0;
+}
+
+.dropdown2{
+    
+}
+
+.dropdownAvatarGroup{
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.avatarMenu{
+    margin-right: 1rem;
+}
+.dropdownLogoutGroup{
+    padding: 0.5rem;
+}
+
+.dropdownLogoutItem{
+    display: flex;
+    cursor: pointer;
+    
+}
+
+.dropdownLogoutLogo{
+    margin-right: 1rem;
+}
+.login{
+    margin-right: 1rem;
+}
+
+.loginButton{
+    height: 1.5rem;
+    padding: 0 0.5rem;
+    border: 1px solid rgb(114, 114, 114);
+    /* background-color: white; */
+    border-radius: 0.5rem;
+    color: rgb(136, 136, 136);
+cursor: pointer;
+}
+.drawerBackground{
+    background-color: rgb(240, 240, 240);
+    padding: 50px 0;
+    animation: move-it 0.1s ease;
+}
+
+@keyframes move-it{
+    from{
+      /* transform: translateY(7.5rem); */
+      /* transform: translateY(0); */
+      width: 0;
+      opacity: 0;
+    
+    }
+    to{
+      /* transform: translateY(0); */
+      width: 240px;
+      opacity: 100%;
+    
+    }
+  }
+
+.drawerMain{
+    padding: 50px 0;
+ 
+}
+.drawerBody{
+    
+    
+}
+
+.drawerItemGroup{
+    display: flex;
+    align-items: center;
+}
+
+.drawerItemLogo{
+    margin-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.drawerItem{
+    padding: 1rem 1.5rem;
+    /* background-color: blueviolet; */
+    text-decoration: none;
+    margin: 0.2rem 0.2rem;
+}
+
+.drawerItem:hover{
+    background-color: rgb(192, 192, 192);
+    border-radius: 0.5rem;
+    margin: 0.2rem 0.2rem;
+}
+
+.drawerItemSelected{
+    padding: 1rem 1.5rem;
+    background-color: rgb(111, 111, 111);
+    font-weight: 600;
+    color: rgb(229, 229, 229);
+    border-radius: 0.5rem;
+    margin: 0.2rem 0.2rem;
+}
+
+.drawerItemText{
+    font-size: 1rem;
+    
+}
+
+a {
+    text-decoration: none;
+  
+}
+
+.userGroup{
+    font-weight: 600;
+}
+
+.dropdownLogoutLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: rgb(199, 199, 199);
+    cursor: pointer;
+}
+
+.logoText{
+    font-family: 'Jua', sans-serif;
+    font-size: 1.3rem;
+    color: rgb(114, 114, 114);
+    /* border: 3px solid rgb(114, 114, 114); */
+    padding: 0 0.3rem;
+    
+    
+}

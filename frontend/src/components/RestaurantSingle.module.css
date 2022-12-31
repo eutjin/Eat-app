@@ -1,0 +1,70 @@
+.card{
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.cardColor{
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.titleName{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.titleSub{
+    display: flex;
+    color: rgb(88, 88, 88);
+}
+
+.titleSubText{
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.titleInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.titleInfoIcon{
+    color:rgb(168, 168, 168);
+margin-right: 0.8rem;
+font-size: 1.3rem;
+
+}
+
+.titleInfoContainer{
+    padding: 0.1rem 1rem;
+}
+
+.titleInfoMain{
+    padding: 0.5rem 0;
+}
+
+.distanceFlag{
+    border:1px solid rgb(26, 161, 26);
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+    font-size: 0.8rem;
+    margin: auto 0;
+    margin-left: 1rem;
+    background-color: rgb(206, 238, 206);
+    color: rgb(26, 161, 26);
+}

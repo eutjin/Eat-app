@@ -1,0 +1,601 @@
+.card{
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.buttonBack{
+    position:absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.titleMainSection{
+    position: relative;
+   
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.titleName{
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 0 2rem;
+}
+.titleName:hover{
+    background-color: rgb(243, 243, 243);
+    border-radius: 0.5rem;
+}
+
+
+
+.titleSub{
+    display: flex;
+}
+
+.titleSubText{
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+.titleInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.menuInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+
+.titleInfoContainer{
+    padding: 0.1rem 1rem;
+    position: relative;
+}
+
+.titleInfoContainer:hover{
+    background-color: rgb(247, 247, 247);
+}
+
+.titleInfoMain{
+    padding: 0.5rem 0;
+}
+.titleInfo2{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+}
+/* .titleInfo:hover{
+    background-color: rgb(247, 247, 247);
+} */
+.titleInfoIcon{
+    color:rgb(168, 168, 168);
+margin-right: 0.8rem;
+font-size: 1.3rem;
+
+}
+.menuTitle{
+    display: flex;
+ font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+}
+.titleButtonContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+}
+.titleButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titleData{
+    width: 90%;
+}
+
+.editForm{
+    width: 100%;
+}
+
+.titleMenuSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.notificationContentContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* padding: 0 1rem; */
+}
+
+.notificationItemIcon{
+    font-size: 1.2rem;
+    color:rgb(163, 162, 162)
+}
+
+.notificationItem{
+    padding: 1rem;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    display: flex;
+    gap: 1rem;
+}
+
+.menuCard{
+    background-color: rgb(255, 255, 255);
+    
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: #ECECEC;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+margin-top: 0;
+}
+
+.menuCardNone{
+    background-color: rgb(255, 255, 255);
+    
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: #ECECEC;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+margin-top: 0;
+height: 10rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.menuCardNoneTitle{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.menuCardNoneButton{
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+   
+    padding: 0.5rem 2rem;
+    justify-content: center;
+    color: #808080;
+    border: solid 1px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+
+}
+
+.menuCard2{
+    background-color: rgb(255, 255, 255);
+    
+    /* border: solid 1px;
+    border-radius: 1rem;
+    border-color: #ECECEC; */
+}
+
+.titleIconContainer{
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleIconContainer:hover{
+    background-color: #e2e2e2;
+}
+
+.itemButtonGroup{
+    display: flex;
+}
+
+.itemButton{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+   
+    margin: 0 0.2rem;
+   }
+   .itemButtonGroup a{
+    text-decoration: none;
+    color: black;
+   }
+  
+   .itemButton:hover{
+    background-color: #ECECEC;
+   }
+
+   /* .menuMore{
+    margin-right: 3rem;
+   } */
+
+   .dateGroup{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 7);
+    align-items: center;
+    padding: 0.5rem 0;
+
+}
+
+.dateMarker{
+    
+    font-size: 1.5rem;
+    color: #bbbbbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+    
+
+}
+.dateMarkerContainer{
+    width: calc(100% / 7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+}
+
+.dateGroupSelected{
+    display: flex;
+    
+    flex-direction: column;
+    width: calc(100% / 7);
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: solid 3px;
+    border-color: #a8e2a8;
+    
+}
+
+.dateGroupSelected:hover{
+
+    background-color: #ECECEC;
+}
+
+.dateGroup:hover{
+background-color: #ECECEC;
+}
+  
+.date{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 2px; 
+    border-color: #ECECEC; 
+}
+
+.marker{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+.dateControlContainer{
+    background-color: rgb(255, 255, 255);
+    
+    /* border: solid 1px;
+    border-radius: 1rem;
+    border-color: #ECECEC; */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+}
+.dateControl{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    z-index: 0;
+}
+
+.calendarPop{
+    z-index: 1000;
+    overflow: visible;
+    overflow: visible;
+}
+
+.calendarButton{
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 2rem;
+    padding: 0;
+    justify-content: center;
+    color: #808080;
+}
+
+
+.calendarButton:hover{
+    background-color: #eee;
+ 
+}
+
+.calendarButtonToday{
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 3.8rem;
+    padding: 0;
+    justify-content: center;
+    color: #808080;
+}
+
+.calendarButtonToday:hover{
+    background-color: #eee;
+}
+
+.calendarButtonGroup{
+    display: flex;
+    border: solid 1px;
+    border-radius: 0.5rem;
+    border-color: #a5a5a5;
+    overflow: hidden;
+    height: 1.8rem;
+    justify-content: space-between;
+    
+}
+
+.calendarButtonGroup2{
+    display: flex;
+    border: solid 1px;
+    border-radius: 0.5rem;
+    border-color: #a5a5a5;
+    overflow: hidden;
+    height: 1.8rem;
+    justify-content: space-between;
+    margin-left: 0.5rem;
+    
+}
+
+.verticalBorder{
+   border-left: 1px solid #eee
+}
+
+.dateControlText{
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+    z-index: 0;
+}
+
+.calendarRight{
+    display: flex;
+}
+
+.dateDay{
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.dateDate{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.dateDate2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-right: 0.3rem;
+}
+.dateDateSelected{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.dateMonth{
+    font-size: 0.7rem;
+    font-weight: 500;
+
+}
+
+.dateMonth2{
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: -0.3rem 0;
+    padding: -0.3rem 0;
+
+}
+
+.dateMonthSelected{
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.menuDate{
+    display: flex;
+    align-items: center;
+}
+
+.dateDividerVertical{
+    border-right: solid 2px;
+    border-color: black;
+    padding-right: 1rem;
+}
+
+.titleEditContainer{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: absolute;
+    top: -0.8rem;
+    right: 1rem;
+    color: #5a5a5a;
+  
+}
+
+.titleEditContainer:hover{
+ 
+    transform: translateY(2px);
+    
+}
+
+.titleEditContainer2{
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    color: #5a5a5a;
+  
+}
+
+.titleEditContainer2:hover{
+ 
+    transform: translateY(2px);
+    
+}
+
+.inputMenuContainer{
+    margin: 0.5rem 1rem;
+    /* width: 100%; */
+border: solid 1px; 
+border-color: rgb(211, 211, 211);
+border-radius: 10px;
+padding: 0.5rem 0.5rem;
+background-color: white;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+display: flex;
+/* margin: 0.5rem 0; */
+}
+
+.inputMenuContainer2{
+    margin: 0.5rem 3rem;
+    /* width: 80%; */
+border: solid 1px; 
+border-color: rgb(211, 211, 211);
+border-radius: 10px;
+padding: 0.5rem 0.5rem;
+background-color: white;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+display: flex;
+/* margin: 0.5rem auto; */
+z-index: 2000;
+}
+
+.textInput{
+    border: none;
+    width: 80%;
+    font-size: 1rem;
+    height: 2rem;
+    
+    background-color: white;
+    }
+
+    .buttonsGroup{
+     width: 20%;
+     display: flex;
+     justify-content: end;
+     gap: 0.5rem;
+      }
+      .inputButton {
+        background-color: #51d27ec0;
+        border: 0;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        /* text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto; */
+        /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
+        cursor: pointer;
+        user-select: none;
+       
+      }
+
+      .inputButtonCancel{
+        background-color: var(--button-grey-theme);
+        border: 0;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #000000;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        /* text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto; */
+        /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
+        cursor: pointer;
+        user-select: none;
+      }
+
+      input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.notificationTag{
+    background-color: gray;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.2rem;
+    color: white;
+}
+.notificationTitleSection{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.notificationViewButton{
+    padding: 0 1rem;
+    padding-bottom: 1rem;
+    color: #a5a5a5;
+}

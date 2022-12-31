@@ -1,0 +1,230 @@
+.card{
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.singleReviewContainer{
+    margin: 1rem;
+    border: 1px solid rgb(219, 219, 219);
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.singleReviewHeader{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+}
+.headerLeft{
+    display: flex;
+}
+
+.headerAvatar{
+    margin-right: 0.5rem;
+}
+.headerRatingTime{
+    display: flex;
+    align-items: center;
+}
+.headerRating{
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerTime{
+    font-size: 0.8rem;
+    color: rgb(145, 145, 145);
+}
+.reviewImagesContainer{
+    display: flex;
+}
+.reviewImage{
+    object-fit: cover;
+    border-radius: 0.5rem;
+    width: 80px;
+    height: 80px;
+    margin-right: 0.5rem;
+    
+}
+
+.reviewImage:hover{
+    /* border: solid  rgb(141, 194, 111); */
+    outline: 3px solid rgb(235, 211, 105);
+    outline-offset: -3px;
+}
+
+.reviewHeader{
+    padding: 1rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+.inputMenuContainer{
+    margin: 1rem 1rem;
+    /* width: 100%; */
+border: solid 1px; 
+border-color: rgb(211, 211, 211);
+border-radius: 10px;
+padding: 0.5rem 1rem;
+background-color: white;
+/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+cursor: text;
+color: rgb(211, 211, 211);
+}
+
+.inputMenuContainerDisabled{
+    margin: 1rem 1rem;
+    /* width: 100%; */
+border: solid 1px; 
+border-color: rgb(211, 211, 211);
+border-radius: 10px;
+padding: 0.5rem 1rem;
+background-color: rgb(245, 245, 245);
+/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+cursor: text;
+color: rgb(179, 179, 179);
+}
+
+.modalModal{
+    width: 480px;
+    max-width: 100%;
+    padding: 3px;
+    padding-bottom: 0;
+    background: none;
+   
+}
+
+.modalHeader{
+    display: none;
+}
+
+.modalImage{
+    width: 100%;
+}
+
+.headerUserNameBadge{
+    display: flex;
+    align-items: center;
+}
+
+.headerAuthorBadge{
+    margin-left: 1rem;
+}
+
+.headerOption{
+    
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    color: gray
+}
+
+.headerOption:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+.headerOptionGroup{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.vendorModalContentText{
+    padding-bottom: 1rem;
+
+}
+
+.calendarButton{
+    background-color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 2rem;
+  
+    justify-content: center;
+    color: #808080;
+  }
+  
+  .calendarButton:hover{
+    background-color: #eee;
+  
+  }
+  
+  .verticalBorder{
+    border-left: 1px solid #eee
+  }
+  
+  .calendarButtonGroup{
+    display: flex;
+    border: solid 1px;
+    border-radius: 0.5rem;
+    border-color: var(--component-border-color);
+    overflow: hidden;
+    height: 1.8rem;
+    /* justify-content: space-between; */
+    
+   
+    
+  }
+
+  .pageNumber{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+  }
+
+  .reviewBottom{
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .reviewReply{
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+
+  .reviewReplyBtn{
+border: none;
+background-color: var(--button-off-black);
+color: white;
+padding: 0.5rem 1rem;
+border-radius: 0.5rem;
+  }
+
+  .replyContainer{
+    background-color: rgb(247, 247, 247);
+    margin: 1rem 0;
+    padding: 0.7rem;
+    border-radius: 1rem;
+  }
+
+  .vendorModalBtn{
+    
+        background-color: #51d27ec0;
+        border: 0;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        text-align: center;
+        cursor: pointer;
+        -webkit-user-select: none;
+        user-select: none;
+        width: 100%;
+        height: 2.5rem;
+        margin-bottom: 0.7rem;
+    
+  }

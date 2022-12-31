@@ -1,0 +1,397 @@
+/* .infoContainer{
+    position: absolute;
+    bottom: 2rem;
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+  max-height: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  
+  } */
+  .infoContainer{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  height: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  
+  
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;;
+  animation: go-up 0.1s ease;
+  /* overflow: hidden; */
+  }
+
+  @keyframes go-up{
+    from{
+      /* transform: translateY(7.5rem); */
+      transform: translateY(0);
+      height: 7.5rem;
+    
+    }
+    to{
+      transform: translateY(0);
+      height: 18rem;
+    
+    }
+  }
+
+  .infoContainerMini{
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  height: 7.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  
+  animation: go-down 0.1s ease;
+  }
+
+  @keyframes go-down{
+    from{
+      transform: translateY(0);
+      height: 20rem;
+    }
+    to{
+      transform: translateY(0);
+      height: 7.5rem;
+    }
+  }
+  .infoContainerContent{
+    padding: 0 1rem;
+    padding-top: 1rem;
+    
+  }
+
+  .infoContainerHide{
+    display: none;
+  }
+
+  .searchBar{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    align-items: center;
+    border: 1px solid rgb(228, 228, 228);
+    margin: 0.5rem 0;
+    justify-content: space-between;
+  }
+
+
+  .searchBar input{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    width: 85%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .searchBarIcon{
+    font-size: 1.6rem;
+    color: rgb(82, 82, 82);
+  }
+
+  .searchBarButton{
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(148, 148, 148);
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+
+  .searchButtonGroup{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menuSectionContainer{
+    width: 100%;
+    position: relative;
+  }
+
+  .menuSection{
+    background-color: rgb(255, 255, 255);
+    height: 12rem;
+    
+    padding: 1rem 0.1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-self: baseline;
+    display: flex;
+   
+   overflow-x: auto;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+  }
+
+  .menuSection::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .menuContainer{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    min-width: 15rem;
+    border-radius: 0.5rem;
+    color: rgb(43, 43, 43);
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+  }
+.menuContainerContent{
+    padding: 0.8rem;
+    height: 100%;
+}
+
+.searchTitle{
+    font-size: 1rem;
+    
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border-bottom: 1px solid rgb(218, 218, 218);
+    /* letter-spacing: 1px; */
+    
+}
+
+.menuContainerTitle{
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menuContainerFoodlist{
+    font-size: 0.9rem;
+}
+.menuContainerRating{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem
+}
+
+.calendarButton{
+  background-color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  width: 2rem;
+  padding: 0;
+  justify-content: center;
+  color: #808080;
+}
+
+.calendarButton:hover{
+  background-color: #eee;
+
+}
+
+.verticalBorder{
+  border-left: 1px solid #eee
+}
+
+.calendarButtonGroup{
+  display: flex;
+  border: solid 1px;
+  border-radius: 0.5rem;
+  border-color: #a5a5a5;
+  overflow: hidden;
+  height: 1.8rem;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+}
+
+.menuLengthOverlay{
+  position: absolute;
+  bottom: 0;
+  right: 5rem;
+  background-color: var(--button-off-black);
+  /* width: 4rem; */
+  height: 28.8px;
+  border-radius: 0.5rem;
+  padding:0 1rem;
+  color: white;
+  border: 1px solid var(--button-off-black);
+}
+
+.infoContainerBtn{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.infoContainerBtn:hover{
+  
+  background-color: rgb(230, 230, 230);
+}
+
+.searchTitleNavigation{
+  display: flex;
+  gap: 1.5rem;
+}
+
+.searchNavigationActive{
+  
+  color: #000000;
+  border-bottom: 3px solid rgb(94, 197, 140);
+}
+
+.searchNavigation{
+  font-weight: 400;
+  color: #a5a5a5;
+}
+
+.menuSectionLength{
+  padding: 0;
+}
+
+.clearQueryButton{
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color:var(--button-off-black);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+ 
+}
+
+.overlayContainer{
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.addressErrorModal{
+  position: absolute;
+  top: 5rem;
+  background-color: rgb(255, 255, 255);
+  width: 85%;
+height: 20rem;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+border-radius: 0.5rem;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+justify-content: space-between;
+align-items: center;
+}
+
+.addressErrorModalHeader{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.addressErrorModalButton{
+  border: none;
+  background-color: var(--button-off-black);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.addressErrorModalTop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.searchRecentKeyGroup{
+  display: flex;
+  gap: 0.5em;
+}
+
+.searchRecent{
+  padding: 1rem 0.5rem;
+}
+
+.searchRecentTitle{
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchRecentClear{
+  color: #afafaf;
+  font-size: 1rem;
+}
+
+.optionSingle{
+  border: 1px solid var(--component-border-color);
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+}
+
+.searchSectionHeader{
+  
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  /* padding: 0.5rem; */
+  position: relative;
+}
+.searchSectionText{
+ display: flex;
+ justify-content: center;
+}
+.searchSectionClose{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0 0.5rem;
+}
+@media (min-width: 481px){
+  .addressErrorModal{width: 50%;
+
+}}

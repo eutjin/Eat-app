@@ -1,0 +1,284 @@
+/* .card{
+    margin: 1rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleName{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.titleSub{
+    display: flex;
+}
+
+.titleSubText{
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.titleInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.titleInfoIcon{
+    color:gray;
+margin-right: 0.5rem;
+} */
+
+.card{
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.titleButtonIcon{
+    font-size: 1.6rem;
+    color: rgb(90, 90, 90);
+}
+
+.titleName{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.titleSub{
+    display: flex;
+}
+
+.titleSubText{
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.titleInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+.titleInfoIcon{
+    color:rgb(168, 168, 168);
+margin-right: 0.8rem;
+font-size: 1.3rem;
+
+}
+
+.titleInfoContainer{
+    padding: 0.1rem 1rem;
+}
+
+.titleInfoMain{
+    padding: 0.5rem 0;
+}
+
+
+
+
+
+
+.menuTitle{
+    display: flex;
+    justify-content: space-between;
+}
+.titleButtonContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem 0;
+}
+.titleButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuCard{
+    background-color: rgb(255, 255, 255);
+    
+    border: solid 1px;
+    border-radius: 1rem;
+    border-color: #ECECEC;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 1rem;
+margin-top: 0;
+}
+
+.menuTitle{
+    display: flex;
+ font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+}
+
+.menuTitleNone{
+    display: flex;
+ font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    height: 5rem;
+
+}
+
+.menuDate{
+    display: flex;
+    align-items: center;
+}
+
+.dateDate2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-right: 0.3rem;
+}
+
+
+.dateDividerVertical{
+    border-right: solid 2px;
+    border-color: black;
+    padding-right: 1rem;
+}
+
+.dateMonth2{
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin: -0.3rem 0;
+    padding: -0.3rem 0;
+
+}
+
+.titleInfoMain{
+    padding: 0.5rem 0;
+}
+.titleInfoContainer{
+    padding: 0.1rem 1rem;
+}
+.menuInfo{
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+}
+.menuNone{
+font-weight: 500;
+}
+
+.selectedImage{
+    object-fit: cover;
+    border-radius: 0.5rem;
+    width: 60px;
+    height: 60px;
+    margin-right: 0.5rem;
+}
+/* start */
+.inputMenuContainer{
+    margin: 0 1rem;
+    /* width: 100%; */
+border: solid 1px; 
+border-color: rgb(211, 211, 211);
+border-radius: 10px;
+padding: 1rem 1rem;
+background-color: white;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.textInput{
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    height: 2rem;
+    
+    background-color: white;
+    }
+
+    .buttonsGroup{
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .inputButton {
+        background-color: #51d27ec0;
+        border: 0;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: .875rem;
+        font-weight: 600;
+        line-height: 1.25rem;
+        padding: 0.4rem 1rem;
+        text-align: center;
+        /* text-decoration: none #D1D5DB solid;
+        text-decoration-thickness: auto; */
+        /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
+        cursor: pointer;
+        user-select: none;
+        margin-right: 0.7rem;
+      }
+      
+      .inputButton:hover {
+        background-color: #4da46bc0;
+        /* transform: translateY(-2px); */
+      }
+      
+      .inputButton:active {
+          background-color: #4da46bc0;
+          transform: translateY(-2px);
+        }
+      
+      .inputButton[disabled=disabled], .inputButton:disabled {
+          opacity: 0.5;
+          
+          /* pointer-events: none; */
+          cursor: not-allowed;
+      }
+
+      .containerBottom{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .imageUploadGroup{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      input[type="file"] {
+        display: none;
+      }
+      
+      /* input[type="submit"] {
+        display: none;
+      } */
+
+      .fileInput{
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        display: inline-block;
+       height: 60px;
+       width:60px;
+        cursor: pointer;
+        margin-right: 0.5rem
+      }
