@@ -486,7 +486,7 @@ const Register = () => {
         {/* <GoogleLogin onSuccess={(response) => handleGoogleLogin(response)} /> */}
          
           <p id="token-result"></p>
-          <button onClick={() => handleKakaoLogout()}>KakaoLogout</button>
+          {/* <button onClick={() => handleKakaoLogout()}>KakaoLogout</button> */}
           <Text color="dimmed" size="sm" align="center" mt={5}>
             Already have an account?{" "}
             <Anchor size="sm" ml={6} component={Link} to="/login">

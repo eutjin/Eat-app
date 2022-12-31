@@ -412,12 +412,16 @@ const sortText=() =>{
             {ratingText()}
           </div>
           <div className={sortType==""? styles.optionSingle: styles.optionSingleColor}  onClick={() => setSortControlActive(true)}>{sortText()}</div>
-          <div
-            className={styles.optionSingle}
-            onClick={() => setToggle((prev) => !prev)}
-          >
-            Search
-          </div>
+          
+          {window.location.pathname!="/eats" &&
+         ( <div
+          className={styles.optionSingle}
+          onClick={() => setToggle((prev) => !prev)}
+        >
+          Search
+        </div>)
+          }
+          
           
           
           

@@ -415,7 +415,7 @@ function StoreMap() {
       let dist = poly.getLength();
       // console.log("getLength", dist);
 
-      console.log("out2", radiusValue);
+      // console.log("out2", radiusValue);
       if (dist < radiusValue) {
         // console.log("getback", item._id);
 
