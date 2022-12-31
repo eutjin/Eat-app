@@ -27,7 +27,7 @@ app.use('/api/address', require('./routes/addressRoutes'))
 app.use(errorHandler)
 
 if(process.env.NODE_ENV==='production'){
-    console.log("productin")
+    console.log("production")
     app.use(express.static(path.join('../frontend/build')))
 
     app.get('*', (req,res)=>res.sendFile(path.resolve('frontend', 'build', 'index.html')))
