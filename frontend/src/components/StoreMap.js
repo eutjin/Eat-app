@@ -83,7 +83,7 @@ function StoreMap() {
   //     },
   //   ];
 
-  console.log("stores", allStores);
+ 
   //   console.log("state", location.state)
   //   useEffect(()=>{
   //     if(location.state){
@@ -113,7 +113,7 @@ function StoreMap() {
       currentCoord.lat,
       currentCoord.lng
     );
-    console.log("p1", currentPosition);
+    // console.log("p1", currentPosition);
 
     let nearbyStore2 = [];
 
@@ -127,7 +127,7 @@ function StoreMap() {
     } else {
       allStoresCopy = [...allStores];
     }
-    console.log("COPY", allStoresCopy);
+    
 
     allStoresCopy.forEach((item) => {
       let storePosition = new kakao.maps.LatLng(
@@ -148,7 +148,7 @@ function StoreMap() {
         nearbyStore2.push(itemMod);
       }
     });
-    console.log("888", nearbyStore2);
+    // console.log("888", nearbyStore2);
     setNearbyStores2(nearbyStore2);
   }, [currentCoord, radiusValue, rating, allStores]);
 
@@ -230,7 +230,7 @@ function StoreMap() {
 
   const setCenter = () => {
     if (clickedStoreCoord.lat) {
-      console.log("meiyo");
+      
       return new kakao.maps.LatLng(
         clickedStoreCoord.lat,
         clickedStoreCoord.lng
@@ -252,8 +252,8 @@ function StoreMap() {
         level: 4, 
       };
 
-    console.log("mapContainer", mapContainer);
-    console.log("mapOption", mapOption);
+    // console.log("mapContainer", mapContainer);
+    // console.log("mapOption", mapOption);
     
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
@@ -350,7 +350,7 @@ function StoreMap() {
     currentPosMarker.setMap(map);
     currentPosMarker.setDraggable(true);
     kakao.maps.event.addListener(currentPosMarker, "dragend", function () {
-      console.log("we", currentPosMarker.getPosition());
+      // console.log("we", currentPosMarker.getPosition());
       setCurrentCoord({
         lat: currentPosMarker.getPosition().Ma,
         lng: currentPosMarker.getPosition().La,
@@ -368,10 +368,10 @@ function StoreMap() {
     allStores.forEach((item) => {
       // const markerImage3= require("../assets/markerInactive.png");
       const jes = nearbyStores2.some((e) => e._id == item._id);
-      console.log("JES", jes);
+    
 
       if (nearbyStores2.some((e) => e._id == item._id)) {
-        console.log("SOME HERE");
+        // console.log("SOME HERE");
         const markerImage3 = require("../assets/markerActive.png");
         var imageSrc = markerImage3, // 마커이미지의 주소입니다
           imageSize = new kakao.maps.Size(28, 28), // 마커이미지의 크기입니다
@@ -379,7 +379,7 @@ function StoreMap() {
 
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
       } else {
-        console.log("SOME NOT HERE");
+        // console.log("SOME NOT HERE");
         const markerImage3 = require("../assets/markerInactive.png");
         var imageSrc = markerImage3, // 마커이미지의 주소입니다
           imageSize = new kakao.maps.Size(28, 28), // 마커이미지의 크기입니다
@@ -402,8 +402,8 @@ function StoreMap() {
         ),
         image: markerImage,
       });
-      console.log("marker", marker);
-      console.log("markerZ", item);
+      // console.log("marker", marker);
+      // console.log("markerZ", item);
       marker.setMap(map);
 
       markers.push(marker); // for marker clusterer, as it requires an array of markers instead of single marker
@@ -413,11 +413,11 @@ function StoreMap() {
       });
 
       let dist = poly.getLength();
-      console.log("getLength", dist);
+      // console.log("getLength", dist);
 
       console.log("out2", radiusValue);
       if (dist < radiusValue) {
-        console.log("getback", item._id);
+        // console.log("getback", item._id);
 
         //prevent duplicate as loop run for 4 times (not sure)
         // if(!nearbyStores.includes(item._id)){
@@ -467,7 +467,7 @@ function StoreMap() {
 
       closeBtn.onclick = function () {
         customOverlay.setMap(null);
-        console.log("closss");
+        // console.log("closss");
       };
       header.appendChild(closeBtn);
 
@@ -541,7 +541,7 @@ function StoreMap() {
         clickedStoreCoord.lat == item.storeCoordinate.lat &&
         clickedStoreCoord.lng == item.storeCoordinate.lng
       ) {
-        console.log("clikyclik");
+        // console.log("clikyclik");
         clickedOverlay = customOverlay;
         customOverlay.setMap(map);
         isOpen = true;
@@ -553,36 +553,36 @@ function StoreMap() {
         // var po= customOverlay.getVisible();
         // console.log("po", po)
         // setClickedStoreCoord({})
-        console.log("customOverlay1", customOverlay.n);
-        console.log("open", open);
+        // console.log("customOverlay1", customOverlay.n);
+        // console.log("open", open);
 
         map.panTo(marker.getPosition());
 
         //ori fixed
-        console.log("marker2", marker);
+        // console.log("marker2", marker);
         if (clickedOverlay == customOverlay && isOpen == true) {
-          console.log("clickedOverlay", clickedOverlay);
+          // console.log("clickedOverlay", clickedOverlay);
           customOverlay.setMap(null);
           isOpen = false;
 
-          console.log("run1");
+          // console.log("run1");
         } else if (clickedOverlay && clickedOverlay != customOverlay) {
           console.log("clickedOverlay", clickedOverlay);
           clickedOverlay.setMap(null);
           customOverlay.setMap(map);
           isOpen = true;
-          console.log("run2");
+          // console.log("run2");
         } else if (isOpen == false) {
           customOverlay.setMap(map);
           isOpen = true;
           // console.log("isopen", isOpen)
-          console.log("run3");
+          // console.log("run3");
         }
 
         clickedOverlay = customOverlay;
-        console.log("clickedOverlay", clickedOverlay.n);
-        console.log("customOverlay", customOverlay.n);
-        console.log("isOpen ", isOpen);
+        // console.log("clickedOverlay", clickedOverlay.n);
+        // console.log("customOverlay", customOverlay.n);
+        // console.log("isOpen ", isOpen);
       });
 
       // kakao.maps.event.addListener(map, "click", function (e) {
@@ -628,7 +628,7 @@ function StoreMap() {
       //   console.log("customOverlay", customOverlay.n);
       // });
     });
-    console.log("out3", nearbyStoreArr);
+    // console.log("out3", nearbyStoreArr);
     setNearbyStores(nearbyStoreArr);
 
     clusterer.addMarkers(markers);
@@ -636,7 +636,7 @@ function StoreMap() {
 
   useEffect(() => {
     kakaoMap();
-    console.log("ee");
+    // console.log("ee");
   }, [allStores]);
 
   //   useEffect(() => {
