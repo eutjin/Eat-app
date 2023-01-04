@@ -28,10 +28,11 @@ cursor: pointer;
 }
 
 .overlayContainer{
-    position: absolute;
+    position: fixed;
     top: 0;
+    left:0;
     background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
+    width: 100vw;
     height: 100%;
     z-index: 1000;
 }
@@ -40,7 +41,7 @@ cursor: pointer;
     position: absolute;
     top: 0.5rem;
     background-color: rgb(255, 255, 255);
-    width: 90%;
+    width: 85%;
   height: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -229,6 +230,17 @@ max-width: fit-content;
 position: relative;
   }
 
+ /* .optionGroup::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    bottom: 0;
+    width: 10px;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
+    pointer-events: none;
+  } */
+
   .optionGroup::-webkit-scrollbar {
     display: none;
   }
@@ -303,3 +315,9 @@ position: relative;
   .verticalBorder{
     border-left: 1px solid var(--component-border-color)
   }
+
+  @media (min-width: 481px){
+    .modalContainer{max-width: 800px;
+
+}
+}
