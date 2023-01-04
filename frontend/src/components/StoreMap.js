@@ -83,7 +83,6 @@ function StoreMap() {
   //     },
   //   ];
 
- 
   //   console.log("state", location.state)
   //   useEffect(()=>{
   //     if(location.state){
@@ -127,7 +126,6 @@ function StoreMap() {
     } else {
       allStoresCopy = [...allStores];
     }
-    
 
     allStoresCopy.forEach((item) => {
       let storePosition = new kakao.maps.LatLng(
@@ -230,7 +228,6 @@ function StoreMap() {
 
   const setCenter = () => {
     if (clickedStoreCoord.lat) {
-      
       return new kakao.maps.LatLng(
         clickedStoreCoord.lat,
         clickedStoreCoord.lng
@@ -244,17 +241,23 @@ function StoreMap() {
     }
   };
 
+  const handleGeolocationButton = () => {
+     getGeolocation();
+    // setClickedStoreCoord({});
+  };
+
+
   const kakaoMap = () => {
     console.log("map rendered");
-    var mapContainer = document.getElementById("map"), 
+    var mapContainer = document.getElementById("map"),
       mapOption = {
-        center: setCenter(),  
-        level: 4, 
+        center: setCenter(),
+        level: 4,
       };
 
     // console.log("mapContainer", mapContainer);
     // console.log("mapOption", mapOption);
-    
+
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
     const zoomIn = () => {
@@ -280,10 +283,10 @@ function StoreMap() {
       map.panTo(moveLatLon);
     }
 
-    const handleGeolocationButton = () => {
-      getGeolocation();
-      setClickedStoreCoord({});
-    };
+    // const handleGeolocationButton = () => {
+    //   getGeolocation();
+    //   setClickedStoreCoord({});
+    // };
 
     document.getElementById("zoomIn").addEventListener("click", zoomIn);
     document.getElementById("zoomOut").addEventListener("click", zoomOut);
@@ -368,7 +371,6 @@ function StoreMap() {
     allStores.forEach((item) => {
       // const markerImage3= require("../assets/markerInactive.png");
       const jes = nearbyStores2.some((e) => e._id == item._id);
-    
 
       if (nearbyStores2.some((e) => e._id == item._id)) {
         // console.log("SOME HERE");
@@ -636,7 +638,7 @@ function StoreMap() {
 
   useEffect(() => {
     kakaoMap();
-    // console.log("ee");
+    console.log("ee");
   }, [allStores]);
 
   //   useEffect(() => {

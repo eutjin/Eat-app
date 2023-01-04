@@ -105,12 +105,17 @@ const AppProvider = ({ children }) => {
   //     };
   // }
 
+
+
   const getGeolocation = () => {
     console.log("GEO RUN");
+
+   
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error, options);
     }
   };
+
 
   const success = (position) => {
     console.log("position", position.coords.latitude);
@@ -118,6 +123,7 @@ const AppProvider = ({ children }) => {
       lat: position.coords.latitude,
       lng: position.coords.longitude,
     });
+    setClickedStoreCoord({});
   };
 
   function error(err) {
@@ -126,7 +132,7 @@ const AppProvider = ({ children }) => {
 
   var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 1000,
     maximumAge: 1,
   };
 
