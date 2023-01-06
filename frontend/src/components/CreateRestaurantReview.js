@@ -33,9 +33,9 @@ function CreateRestaurantReview({setCreateReview, getAllReview}) {
     const [rating, setRating] = useState(0);
     const navigate= useNavigate()
 
-    function Star({ filled, onClick }) {
+    function Star({ filled, onClick,id }) {
         return (
-          <AiFillStar
+          <AiFillStar id={`s${id}`}
            color={filled ? "orange" : "lightgray"} 
            onClick={onClick} />
         );
@@ -47,7 +47,7 @@ function CreateRestaurantReview({setCreateReview, getAllReview}) {
             {Array(5)
               .fill()
               .map((_, index) => (
-                <Star 
+                <Star id={index}
            key={index} 
            filled={index < rating} 
            onClick={() => setRating(index + 1)} />
@@ -172,7 +172,7 @@ setImageSrc(arr)
     <div className={styles.inputMenuContainer}>
       <div className={styles.reviewTitleGroup}><AiOutlineCheck className={styles.reviewTitleGroupIcon}/>Store Review</div>
          {StarRating()}
-    <input
+    <input id="reviewText"
       className={styles.textInput}
       spellcheck="false"
       placeholder="Write a review..."
@@ -202,7 +202,7 @@ setImageSrc(arr)
         }
       </div>
       <div className={styles.buttonsGroup}>
-        <button
+        <button id="reviewSubmit"
           disabled={text&&rating ? false : true}
           className={styles.inputButton}
           onClick={handleAddItem}
