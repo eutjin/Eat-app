@@ -44,6 +44,7 @@ const Restaurants = () => {
 
   useEffect(() => {
     setSliderValue(radiusValue / 20);
+    document.body.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {

@@ -36,7 +36,9 @@ import {
   AiOutlineHeart,
   AiOutlineCrown,
   AiOutlineStar,
-  AiFillEdit, AiOutlineBell, AiOutlineWarning
+  AiFillEdit,
+  AiOutlineBell,
+  AiOutlineWarning,
 } from "react-icons/ai";
 import dayjs from "dayjs";
 import { useGlobalContext } from "../context";
@@ -71,9 +73,9 @@ const Store = () => {
   const [editFormFee, setEditFormFee] = useState(false);
   const [editFormPhone, setEditFormPhone] = useState(false);
   const [editFormStorename, setEditFormStorename] = useState(false);
-  const [hasMenuDates, setHasMenuDates]= useState([])
-  const [hasMenuArray, setHasMenuArray]= useState([])
-  const [openNotification, setOpenNotification]= useState(false)
+  const [hasMenuDates, setHasMenuDates] = useState([]);
+  const [hasMenuArray, setHasMenuArray] = useState([]);
+  const [openNotification, setOpenNotification] = useState(false);
 
   const { storeName, storeAddress, storeFee, storeHours, storePhone } = store;
   useEffect(() => {
@@ -81,6 +83,7 @@ const Store = () => {
     // setStore(location.state);
     getStore();
     getAllMenu();
+    document.body.scrollTo(0, 0);
   }, []);
 
   const onChange = (e) => {
@@ -252,59 +255,68 @@ const Store = () => {
 
   //   // setCurrWeekArr([...dateArray]);
   // };
-useEffect(()=>{
-const currentDate= new Date()
-const currentDateDay= currentDate.getDay()
-console.log("currentDateDay 3", currentDateDay)
- 
-const weekRemainingDays=6-currentDateDay
-const weekRemainingDate=[]
-for(var i=0; i < weekRemainingDays; i++){
-weekRemainingDate.push(new Date(new Date(currentDate).getTime() + i * 24 * 60 * 60 * 1000))
-}
-console.log("weekRemainigDate", weekRemainingDate)
+  useEffect(() => {
+    const currentDate = new Date();
+    const currentDateDay = currentDate.getDay();
+    console.log("currentDateDay 3", currentDateDay);
 
-const nextWeekStartDate= new Date(new Date(currentDate).getTime() + (8 - currentDateDay)* 24 * 60 * 60 * 1000)
-console.log('nextWeekStartDate', nextWeekStartDate)
-const nextWeekDates=[]
-for(var i=0; i < 5; i++){
-  nextWeekDates.push(new Date(new Date(nextWeekStartDate).getTime() + i * 24 * 60 * 60 * 1000))
-  }
-  console.log('nextWeekDates', nextWeekDates)
-
-  const fullDateArray=weekRemainingDate.concat(nextWeekDates)
-  console.log('fullDateArray', fullDateArray)
-
-
-  //tets
-  const testArr=[]
-  
-  // const hasMenuDates=menu.map(item => item.date)
-  // console.log('hasMenuDates', hasMenuDates)
-
-  const test= fullDateArray.map(item => {
-    if(hasMenuDates.includes(new Date(item).toDateString())){
-      console.log("hh")
-      testArr.push({"date": new Date(item), "hasMenu": true})
-    }else{
-      testArr.push({"date": new Date(item), "hasMenu": false})
+    const weekRemainingDays = 6 - currentDateDay;
+    const weekRemainingDate = [];
+    for (var i = 0; i < weekRemainingDays; i++) {
+      weekRemainingDate.push(
+        new Date(new Date(currentDate).getTime() + i * 24 * 60 * 60 * 1000)
+      );
     }
-})
+    console.log("weekRemainigDate", weekRemainingDate);
 
-  console.log("MYTEST", testArr)
-  setHasMenuArray(testArr)
+    const nextWeekStartDate = new Date(
+      new Date(currentDate).getTime() +
+        (8 - currentDateDay) * 24 * 60 * 60 * 1000
+    );
+    console.log("nextWeekStartDate", nextWeekStartDate);
+    const nextWeekDates = [];
+    for (var i = 0; i < 5; i++) {
+      nextWeekDates.push(
+        new Date(
+          new Date(nextWeekStartDate).getTime() + i * 24 * 60 * 60 * 1000
+        )
+      );
+    }
+    console.log("nextWeekDates", nextWeekDates);
 
-}, [hasMenuDates])
+    const fullDateArray = weekRemainingDate.concat(nextWeekDates);
+    console.log("fullDateArray", fullDateArray);
 
-useEffect(()=>{
-  const hasMenuDatesVar=menu.map(item => new Date(item.date).toDateString())
-  console.log('hasMenuDatesVar', hasMenuDatesVar)
-  setHasMenuDates(hasMenuDatesVar)
-}, [menu])
+    //tets
+    const testArr = [];
 
-// useEffect(()=>{
+    // const hasMenuDates=menu.map(item => item.date)
+    // console.log('hasMenuDates', hasMenuDates)
 
-// }, [hasMenuDates])
+    const test = fullDateArray.map((item) => {
+      if (hasMenuDates.includes(new Date(item).toDateString())) {
+        console.log("hh");
+        testArr.push({ date: new Date(item), hasMenu: true });
+      } else {
+        testArr.push({ date: new Date(item), hasMenu: false });
+      }
+    });
+
+    console.log("MYTEST", testArr);
+    setHasMenuArray(testArr);
+  }, [hasMenuDates]);
+
+  useEffect(() => {
+    const hasMenuDatesVar = menu.map((item) =>
+      new Date(item.date).toDateString()
+    );
+    console.log("hasMenuDatesVar", hasMenuDatesVar);
+    setHasMenuDates(hasMenuDatesVar);
+  }, [menu]);
+
+  // useEffect(()=>{
+
+  // }, [hasMenuDates])
 
   const handleSelectDate = (item) => {
     console.log("select!", item);
@@ -386,7 +398,13 @@ useEffect(()=>{
     console.log("passd", value1);
 
     return (
-      <div className={editFormStorename? styles.inputMenuContainer2:styles.inputMenuContainer}>
+      <div
+        className={
+          editFormStorename
+            ? styles.inputMenuContainer2
+            : styles.inputMenuContainer
+        }
+      >
         <input
           type="text"
           id={value1}
@@ -403,13 +421,12 @@ useEffect(()=>{
             Edit
           </button>
           <button
-          className={styles.inputButtonCancel}
-          onClick={() => handleCloseEdit()}
-        >
-          Cancel
-        </button>
+            className={styles.inputButtonCancel}
+            onClick={() => handleCloseEdit()}
+          >
+            Cancel
+          </button>
         </div>
-        
       </div>
     );
 
@@ -655,45 +672,55 @@ useEffect(()=>{
         </div>
       </Card>
 
-      {/* <Card className={styles.card}>
-        <div className={styles.menuTitle}>
-          <Text>메뉴 (lunch)</Text>
-          <Text>18 August 2022</Text>
-        </div>
-        <Divider />
-        <div className={styles.menuItem}>
-          <Text>1. Spicy Pork</Text>
-          <Text>2. Tempura</Text>
-          <Text>3. Spicy Pork</Text>
-          <Text>4. Tempura</Text>
-          <Text>5. Spicy Pork</Text>
-          <Text>6. Tempura</Text>
-          <Text>7. Spicy Pork</Text>
-          <Text>8. Tempura</Text>
-        </div>
-      </Card> */}
-
       <Card className={styles.card}>
-        <div className={styles.notificationTitleSection}>Notifications <div className={styles.notificationTag} onClick={()=>setOpenNotification((prev)=>!prev)}> {hasMenuArray.length}</div></div>
-        {!openNotification && hasMenuArray.length > 0 &&
-        <div className={styles.notificationViewButton} onClick={()=>setOpenNotification((prev)=>!prev)}> view all</div>
-        }
-        
-        {openNotification && <><Divider />
-        <div className={styles.notificationContentContainer}>
-          {hasMenuArray.length > 0
-            ? hasMenuArray.map((item) => 
-                item.hasMenu == false ? <div className={styles.notificationItem}>
-                <div className={styles.notificationItemIcon}>
-                <AiOutlineBell/>
-                </div>
-                <div className={styles.notificationItemContent}>
-                There is no menu set for {dayjs(item.date).format("MMM DD, YYYY")}
-                </div>
-              </div> : null
-              )
-            : null}
-        </div> </>}
+        <div className={styles.notificationTitleSection}>
+          <div className={styles.notificationTitle}>
+            Notifications{" "}
+            
+            <div
+              className={styles.notificationTag}
+             
+            >
+              {" "}
+              {hasMenuArray.length}
+            </div><div
+              className={styles.notificationMore}  onClick={() => setOpenNotification((prev) => !prev)}><AiOutlineDown size={13}/></div>
+          </div>
+          <Link to={`/eats/${store._id}`}>
+          <div className={styles.notificationRight}>TO STORE</div></Link>
+        </div>
+        {!openNotification && hasMenuArray.length > 0 && (
+          <div
+            className={styles.notificationViewButton}
+            onClick={() => setOpenNotification((prev) => !prev)}
+          >
+            {" "}
+            view all notifications
+          </div>
+        )}
+
+        {openNotification && (
+          <>
+            <Divider />
+            <div className={styles.notificationContentContainer}>
+              {hasMenuArray.length > 0
+                ? hasMenuArray.map((item) =>
+                    item.hasMenu == false ? (
+                      <div className={styles.notificationItem}>
+                        <div className={styles.notificationItemIcon}>
+                          <AiOutlineBell />
+                        </div>
+                        <div className={styles.notificationItemContent}>
+                          There is no menu set for{" "}
+                          {dayjs(item.date).format("MMM DD, YYYY")}
+                        </div>
+                      </div>
+                    ) : null
+                  )
+                : null}
+            </div>{" "}
+          </>
+        )}
       </Card>
 
       {/* <Card className={styles.card}>
@@ -831,93 +858,98 @@ useEffect(()=>{
         </Card>
 
         {/* Menu Card Start */}
-        {menu.length > 0
-          &&
-          (menu
-            .filter(
-              (item) =>
-                new Date(item.date).toDateString() === viewDate.toDateString()
-            ).length>0 ?  menu
-            .filter(
-              (item) =>
-                new Date(item.date).toDateString() === viewDate.toDateString()
-            )
-            .map((item) => (
-              <Card className={styles.menuCard}>
-                <div className={styles.menuTitle}>
-                  <div className={styles.menuDate}>
-                    <Text className={styles.dateDate2}>
-                      {dayjs(item.date).format("DD")}
-                    </Text>
-                    <div className={styles.dateDividerVertical}>
-                      <Text className={styles.dateMonth2}>
-                        {dayjs(item.date).format("MMM")}
+        {menu.length > 0 &&
+          (menu.filter(
+            (item) =>
+              new Date(item.date).toDateString() === viewDate.toDateString()
+          ).length > 0 ? (
+            menu
+              .filter(
+                (item) =>
+                  new Date(item.date).toDateString() === viewDate.toDateString()
+              )
+              .map((item) => (
+                <Card className={styles.menuCard}>
+                  <div className={styles.menuTitle}>
+                    <div className={styles.menuDate}>
+                      <Text className={styles.dateDate2}>
+                        {dayjs(item.date).format("DD")}
                       </Text>
-                      <Text className={styles.dateMonth2}>
-                        {dayjs(item.date).format("YYYY")}
-                      </Text>
-                    </div>
-                    <div className={styles.menuTitle}>
-                      <Text>메뉴 (lunch)</Text>
-                    </div>
-                  </div>
-
-                  <div className={styles.menuMore}>
-                    <Popover position="bottom-end" shadow="md" withArrow>
-                      <Popover.Target>
-                        <div>
-                          <AiOutlineMore />
-                        </div>
-                      </Popover.Target>
-                      <Popover.Dropdown>
-                        <div className={styles.itemButtonGroup}>
-                          <Link to={"/editmenu"} state={item}>
-                            <div
-                              className={styles.itemButton}
-                              onClick={() => handleEditMenu(item)}
-                            >
-                              <AiOutlineEdit />
-                            </div>
-                          </Link>
-                          <div
-                            className={styles.itemButton}
-                            onClick={() => handleDeleteMenu(item)}
-                          >
-                            <AiOutlineDelete />
-                          </div>
-                        </div>
-                      </Popover.Dropdown>
-                    </Popover>
-                  </div>
-                </div>
-                <Divider />
-                <div className={styles.titleInfoMain}>
-                  {item.menuItems.map((food, index) => (
-                    <div className={styles.titleInfoContainer}>
-                      <div className={styles.menuInfo}>
-                        <Text>
-                          {index + 1}. {food.foodName}
+                      <div className={styles.dateDividerVertical}>
+                        <Text className={styles.dateMonth2}>
+                          {dayjs(item.date).format("MMM")}
+                        </Text>
+                        <Text className={styles.dateMonth2}>
+                          {dayjs(item.date).format("YYYY")}
                         </Text>
                       </div>
+                      <div className={styles.menuTitle}>
+                        <Text>메뉴 (lunch)</Text>
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </Card>
-            )): <Card className={styles.menuCardNone}>
-              <div className={styles.menuCardNoneTitle}>There is no menu on the selected date</div>
-              <button className={styles.menuCardNoneButton} onClick={() =>
-              navigate(`/addmenu/${id}`, {
-                replace: false,
-                state: { viewDate, store },
-              })
-            }>Create Menu</button>
-            </Card>)
-          
-         
-         
-            }
 
-{/* {menu.length > 0
+                    <div className={styles.menuMore}>
+                      <Popover position="bottom-end" shadow="md" withArrow>
+                        <Popover.Target>
+                          <div>
+                            <AiOutlineMore />
+                          </div>
+                        </Popover.Target>
+                        <Popover.Dropdown>
+                          <div className={styles.itemButtonGroup}>
+                            <Link to={"/editmenu"} state={item}>
+                              <div
+                                className={styles.itemButton}
+                                onClick={() => handleEditMenu(item)}
+                              >
+                                <AiOutlineEdit />
+                              </div>
+                            </Link>
+                            <div
+                              className={styles.itemButton}
+                              onClick={() => handleDeleteMenu(item)}
+                            >
+                              <AiOutlineDelete />
+                            </div>
+                          </div>
+                        </Popover.Dropdown>
+                      </Popover>
+                    </div>
+                  </div>
+                  <Divider />
+                  <div className={styles.titleInfoMain}>
+                    {item.menuItems.map((food, index) => (
+                      <div className={styles.titleInfoContainer}>
+                        <div className={styles.menuInfo}>
+                          <Text>
+                            {index + 1}. {food.foodName}
+                          </Text>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              ))
+          ) : (
+            <Card className={styles.menuCardNone}>
+              <div className={styles.menuCardNoneTitle}>
+                There is no menu on the selected date
+              </div>
+              <button
+                className={styles.menuCardNoneButton}
+                onClick={() =>
+                  navigate(`/addmenu/${id}`, {
+                    replace: false,
+                    state: { viewDate, store },
+                  })
+                }
+              >
+                Create Menu
+              </button>
+            </Card>
+          ))}
+
+        {/* {menu.length > 0
           ? menu
               .filter(
                 (item) =>

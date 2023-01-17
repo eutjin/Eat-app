@@ -229,12 +229,12 @@ const AddStore = () => {
           />
 
           <div className={styles.formButtonGroup}>
-            <Button type="submit" id="submit" className={styles.formButton}>
+            <Button type="submit" id="submit" className={styles.formButton} color="teal">
               Submit
             </Button>
             <Button
               className={styles.formButton}
-              onClick={() => navigate("/about")}
+              onClick={() => navigate("/about")} color="gray"
             >
               Back
             </Button>

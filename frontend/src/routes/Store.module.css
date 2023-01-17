@@ -582,20 +582,58 @@ button:focus {
 }
 
 .notificationTag{
-    background-color: gray;
-    padding: 0.1rem 0.5rem;
+    background-color: rgb(64, 219, 77);
+    /* padding: 0.1rem 0.5rem; */
     border-radius: 0.2rem;
     color: white;
+    font-size: 0.6rem;
+    height: 0.9rem;
+    padding: 0 0.2rem
 }
 .notificationTitleSection{
     display: flex;
     gap: 1.5rem;
     align-items: center;
     padding: 1rem;
+    justify-content: space-between;
+}
+
+.notificationRight{
+    
+    padding: 0.3rem 1rem;
+    border: solid 1px;
+    border-radius: 0.5rem;
+    border-color: #a5a5a5;
+    color: #808080;
+    font-size: 0.8rem;
+}
+
+.notificationRight:hover{
+    background-color: #eee;
 }
 
 .notificationViewButton{
-    padding: 0 1rem;
-    padding-bottom: 1rem;
+    border-top: 1px solid #ced4da;
+    padding: 1rem;
     color: #a5a5a5;
+    cursor: pointer;
+}
+
+.notificationTitle{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.notificationMore{
+    background-color: #f3f3f3;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+}
+.notificationMore:hover{
+    background-color: #e7e7e7;
 }

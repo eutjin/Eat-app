@@ -55,12 +55,15 @@ const RestaurantDetail = () => {
   //   store;
 
   useEffect(() => {
+    
     getDayMenu();
     // setStore(location.state);
     console.log("as", allStores);
     const thisStore = allStores.filter((item) => item._id == id);
     console.log("ts", thisStore);
     setStore(thisStore[0]);
+    document.body.scrollTo(0, 0);
+   
   }, []);
 
   useEffect(() => {
@@ -69,6 +72,7 @@ const RestaurantDetail = () => {
         setFavouritedStore(true);
       }
     }
+   
   }, []);
 
   useEffect(() => {

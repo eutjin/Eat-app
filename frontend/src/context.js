@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import baseUrl from "./BaseUrl";
 import axios from "axios";
+import data from "./data";
 const AppContext = React.createContext();
 
 const getLocalStorageVendor = () => {
@@ -24,7 +25,7 @@ const getLocalStorageUser = () => {
 const AppProvider = ({ children }) => {
   const [vendor, setVendor] = useState(getLocalStorageVendor());
   const [user, setUser] = useState(getLocalStorageUser());
-  const [allStores, setAllStores] = useState([]);
+  const [allStores, setAllStores] = useState(data);
   const [navState, setNavState] = useState("home");
   const [clickedStoreCoord, setClickedStoreCoord] = useState({});
   const [currentCoord, setCurrentCoord] = useState({});
@@ -44,12 +45,12 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     getAllStores();
-    // getGeolocation()
+    getGeolocation()
   }, []);
 
-  useEffect(() => {
-    getGeolocation();
-  }, [allStores]);
+  // useEffect(() => {
+  //   getGeolocation();
+  // }, []);
 
   useEffect(() => {
     localStorage.setItem("user", JSON.stringify(user));

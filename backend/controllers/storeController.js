@@ -115,7 +115,9 @@ const getSingleStore = asyncHandler(async (req, res) => {
 
 //
 const getAllStore = asyncHandler(async (req, res) => {
-  const store = await Store.find();
+ console.log("GETSTORE_START")
+  const store = await Store.find().lean();
+  console.log("GETSTORE", store)
   res.status(200).json(store);
 });
 

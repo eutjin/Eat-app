@@ -320,7 +320,7 @@ function RestaurantDetailReview({ storeId }) {
                 ))}
               </div>
               {/* <div>reiew: {item.reviewRating}</div> */}
-              <div>text: {item.reviewText}</div>
+              <div>{item.reviewText}</div>
               {store.storeOwner && vendor._id == store.storeOwner ? (
                 <div className={styles.reviewReply}>
                   <button
@@ -420,7 +420,7 @@ function RestaurantDetailReview({ storeId }) {
                 <AiOutlineLeft />
               </button>
               <div className={styles.verticalBorder}></div>
-              <div className={styles.pageNumber}>{currentPage}</div>
+              <div className={styles.pageNumber}>{currentPage} / {Math.ceil(allReview.length/5)}</div>
               <div className={styles.verticalBorder}></div>
               <button
                 className={styles.calendarButton}

@@ -103,9 +103,13 @@ function StoreMap() {
   //   }, [location])
 
   useEffect(() => {
+    // if(allStores.length>0 ){
+    //   kakaoMap();
+    // }
     kakaoMap();
     // setNearbyStores([])
-  }, [clickedStoreCoord, currentCoord, nearbyStores2]);
+    console.log("DEBUG1")
+  }, [clickedStoreCoord, currentCoord, ]); //nearbyStores2  optional
 
   useEffect(() => {
     let currentPosition = new kakao.maps.LatLng(
@@ -189,7 +193,8 @@ function StoreMap() {
 
   useEffect(() => {
     setNearbyStores([]);
-    kakaoMap();
+    kakaoMap(); //optional
+    console.log("DEBUG2")
   }, [radiusValue]);
 
   // useEffect(() => {
@@ -227,6 +232,7 @@ function StoreMap() {
   let markers = [];
 
   const setCenter = () => {
+    console.log("DEBUG 3")
     if (clickedStoreCoord.lat) {
       return new kakao.maps.LatLng(
         clickedStoreCoord.lat,
@@ -636,10 +642,10 @@ function StoreMap() {
     clusterer.addMarkers(markers);
   };
 
-  useEffect(() => {
-    kakaoMap();
-    console.log("ee");
-  }, [allStores]);
+  // useEffect(() => {
+  //   kakaoMap();
+  //   console.log("ee");
+  // }, [allStores]);
 
   //   useEffect(() => {
   //     kakaoMap();
