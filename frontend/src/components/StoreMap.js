@@ -20,6 +20,7 @@ import MapAddressControl from "./MapAddressControl";
 import MapControlSort from "./MapControlSort";
 import MapControlRating from "./MapControlRating";
 import baseUrlFrontend from "../BaseUrlFrontend";
+import { Loader } from '@mantine/core';
 // const { kakao } = window;
 
 function StoreMap() {
@@ -101,15 +102,38 @@ function StoreMap() {
   //     }
 
   //   }, [location])
-
+  console.log("DEBUG0", clickedStoreCoord, currentCoord, nearbyStores2);
   useEffect(() => {
     // if(allStores.length>0 ){
     //   kakaoMap();
     // }
-    kakaoMap();
+    if (currentCoord.lat && allStores.length > 0) {
+      kakaoMap();
+    }
+
     // setNearbyStores([])
-    console.log("DEBUG1")
-  }, [clickedStoreCoord, currentCoord, ]); //nearbyStores2  optional
+    console.log("DEBUG1", clickedStoreCoord, currentCoord, nearbyStores2);
+  }, [clickedStoreCoord, currentCoord, nearbyStores2]); //nearbyStores2  optional
+
+  // useEffect(() => {
+
+  //   kakaoMap();
+
+  //   console.log("e1")
+  // }, [clickedStoreCoord  ]);
+
+  // useEffect(() => {
+
+  //   kakaoMap();
+
+  //   console.log("e2")
+  // }, [ currentCoord ]);
+  // useEffect(() => {
+
+  //   kakaoMap();
+
+  //   console.log("e3")
+  // }, [nearbyStores2  ]);
 
   useEffect(() => {
     let currentPosition = new kakao.maps.LatLng(
@@ -193,8 +217,11 @@ function StoreMap() {
 
   useEffect(() => {
     setNearbyStores([]);
-    kakaoMap(); //optional
-    console.log("DEBUG2")
+
+    if (currentCoord.lat && allStores.length > 0) {
+      kakaoMap();
+    } //optional
+    console.log("DEBUG2", radiusValue);
   }, [radiusValue]);
 
   // useEffect(() => {
@@ -232,7 +259,7 @@ function StoreMap() {
   let markers = [];
 
   const setCenter = () => {
-    console.log("DEBUG 3")
+    console.log("DEBUG 3");
     if (clickedStoreCoord.lat) {
       return new kakao.maps.LatLng(
         clickedStoreCoord.lat,
@@ -248,10 +275,9 @@ function StoreMap() {
   };
 
   const handleGeolocationButton = () => {
-     getGeolocation();
+    getGeolocation();
     // setClickedStoreCoord({});
   };
-
 
   const kakaoMap = () => {
     console.log("map rendered");
@@ -652,7 +678,12 @@ function StoreMap() {
   //   }, [add]);
   return (
     <div className="mapPage">
-      <div id="map" className={toggle ? "kakaoMapSmall" : "kakaoMap"}></div>
+      {allStores.length > 0 && currentCoord.lat ? (
+        <div id="map" className={toggle ? "kakaoMapSmall" : "kakaoMap"}></div>
+      ) : (
+        <div className="mapLoadContainer"><Loader variant="dots" color="green" /></div>
+      )}
+
       <MapInfo />
       <MapControlTop />
       <MapAddressControl />

@@ -301,6 +301,29 @@ position: relative;
   text-overflow: ellipsis;
   width: 190px;
   }
+  .addressTextDummy{
+    white-space: nowrap;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  width: 190px;
+  height: 1.4rem;
+  background-color: rgb(241, 241, 241);
+  border-radius: 0.3rem;
+  animation: blink 1s linear infinite;
+  }
+
+  
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
   .viewSelector{
     padding: 0.3rem;
@@ -308,7 +331,7 @@ position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(156, 156, 156);
+    color: rgb(214, 214, 214);
     
   }
 

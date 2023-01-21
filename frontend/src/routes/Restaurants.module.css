@@ -129,6 +129,12 @@ gap: 1rem
     position: absolute;
     width: 100%;
 }
+.restaurantLoading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 150px);
+}
 
 @media (min-width: 481px){
     .radiusControlModal{width: 50%;

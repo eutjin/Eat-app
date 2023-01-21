@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import baseUrl from "./BaseUrl";
 import axios from "axios";
-import data from "./data";
+// import data from "./data";
 const AppContext = React.createContext();
 
 const getLocalStorageVendor = () => {
@@ -25,7 +25,7 @@ const getLocalStorageUser = () => {
 const AppProvider = ({ children }) => {
   const [vendor, setVendor] = useState(getLocalStorageVendor());
   const [user, setUser] = useState(getLocalStorageUser());
-  const [allStores, setAllStores] = useState(data);
+  const [allStores, setAllStores] = useState([]);
   const [navState, setNavState] = useState("home");
   const [clickedStoreCoord, setClickedStoreCoord] = useState({});
   const [currentCoord, setCurrentCoord] = useState({});
@@ -44,8 +44,9 @@ const AppProvider = ({ children }) => {
   const [viewType, setViewType] = useState("");
 
   useEffect(() => {
+   getGeolocation()
     getAllStores();
-    getGeolocation()
+    
   }, []);
 
   // useEffect(() => {
@@ -106,18 +107,6 @@ const AppProvider = ({ children }) => {
   //     };
   // }
 
-
-
-  const getGeolocation = () => {
-    console.log("GEO RUN");
-
-   
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(success, error, options);
-    }
-  };
-
-
   const success = (position) => {
     console.log("position", position.coords.latitude);
     setCurrentCoord({
@@ -133,9 +122,21 @@ const AppProvider = ({ children }) => {
 
   var options = {
     enableHighAccuracy: true,
-    timeout: 1000,
+    timeout: 5000,
     maximumAge: 1,
   };
+
+  const getGeolocation = () => {
+    console.log("GEO RUN");
+
+   
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error, options);
+    }
+  };
+
+
+ 
 
   return (
     <AppContext.Provider

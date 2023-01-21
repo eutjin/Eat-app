@@ -61,7 +61,36 @@ margin-right: 0.5rem;
 .titleName{
     font-size: 1.5rem;
     font-weight: 800;
+    /* height: 2.3rem; */
 }
+
+.titleNameDummy{
+    font-size: 1.5rem;
+    font-weight: 800;
+    height: 2.3rem;
+    animation: blink 1s linear infinite;
+    width: 50%;
+    background-color: rgb(238, 238, 238);
+}
+
+.titleInfoDummy{
+    height: 1.5rem;
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  } 
 
 .titleSub{
     display: flex;

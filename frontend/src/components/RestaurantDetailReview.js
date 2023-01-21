@@ -86,7 +86,7 @@ function RestaurantDetailReview({ storeId }) {
   }, [currentPage]);
 
   useEffect(() => {
-    setCurrentPageReview(allReview.slice(0, 4));
+    setCurrentPageReview(allReview.slice(0, 5));
   }, [allReview]);
 
   const getAllReview = async () => {
@@ -95,8 +95,8 @@ function RestaurantDetailReview({ storeId }) {
       .then(function (response) {
         if (response.data.success) {
           console.log("reviews gget gud");
-          console.log(response.data);
-          setAllReview(response.data.review);
+          console.log("ALLREVIEW",response.data);
+          setAllReview((response.data.review).reverse());
         }
       })
       .catch(function (error) {

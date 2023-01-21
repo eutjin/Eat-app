@@ -13,7 +13,7 @@ import {
   useMantineTheme,
   Card,
   Divider,
-  Slider,
+  Slider, Loader
 } from "@mantine/core";
 import {
   AiOutlineHome,
@@ -162,7 +162,7 @@ console.log("NS2", arr2)
 
 {sortedStores.length > 0
         ? sortedStores.map((item) => <RestaurantSingle store={item} />)
-        : null}
+        : (<div className={styles.restaurantLoading}><Loader variant="dots" color="green" /></div>)}
 </div>
      
 

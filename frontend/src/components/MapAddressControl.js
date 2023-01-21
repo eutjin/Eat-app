@@ -381,7 +381,10 @@ const sortText=() =>{
           <div className={styles.addressTextLogo}>
             <AiOutlineEnvironment size={20} />
           </div>
-          <div className={styles.addressText}>{addressText}</div>
+          {addressText?(
+             <div className={styles.addressText}>{addressText}</div>
+          ):( <div className={styles.addressTextDummy}></div>)}
+          {/* <div className={styles.addressText}>{addressText}</div> */}
           <div className={styles.addressTextLogo}>
             <AiFillCaretDown />
           </div>
