@@ -221,7 +221,7 @@ const About = () => {
         </div>
         <Divider />
         <div className={styles.aboutContent}>
-        <span>Name: {vendor.firstname} {vendor.familyname}</span>
+        <span>Name: {vendor.familyname}{vendor.firstname}</span>
         <span>Email: {vendor.email}</span>
         <span>Store: {vendorStores.length} stores</span>
        
@@ -277,7 +277,7 @@ const About = () => {
                                   : null,
                               }}
                             >
-                              <Link to={`/about/${item._id}`} state={item}>
+                              <Link to={`/about/${item._id}`} state={item} className={styles.cardSingleTextLink}>
                                 <Text className={styles.cardSingleText}>
                                   {item.storeName}
                                 </Text>
