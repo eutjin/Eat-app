@@ -119,8 +119,9 @@ const getAllMenu = asyncHandler(async (req, res) => {
 });
 
 const getDayMenu = asyncHandler(async (req, res) => {
-  console.log("getday", req.body);
+  console.log("getday", req.body, new Date());
   const date = new Date(new Date(req.body.date).setHours(0, 0, 0, 0));
+  
   console.log("date", date);
 
   const date2 = new Date(new Date(date).getTime() + 24 * 60 * 60 * 1000);
